@@ -80,7 +80,7 @@ DB_PASSWORD=your_password
 
 ## pgAdmin Query Result
 Here is an example of the query result in pgAdmin 4:
-![pgAdmin Query Result](images\pgadmin_query_result.png)
+![pgAdmin Query Result](images/pgadmin_query_result.png)
 
 ## Future Enhancements
 - Add data visualization using tools like Tableau or Power BI.

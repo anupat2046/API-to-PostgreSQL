@@ -3,6 +3,11 @@
 ## Project Overview
 This project implements a simple data pipeline that extracts cryptocurrency market data from a public API and loads it into a PostgreSQL database. The pipeline handles real-time cryptocurrency data including prices and market capitalization, using Python for ETL (Extract, Transform, Load) processes.
 
+## Prerequisites
+- PostgreSQL installed and running
+- pgAdmin 4 for database management
+- Python 3.8 or higher
+
 ## Project Objective  
 - Practice API connection and data extraction using Python `requests`  
 - Store structured data into PostgreSQL using `psycopg2`  
@@ -60,8 +65,23 @@ This project implements a simple data pipeline that extracts cryptocurrency mark
 - `.env`: Configuration file for database credentials
 - `.gitignore`: Specifies which files Git should ignore
 
-## Sample Query
-To view top cryptocurrencies by market cap:
-```sql
-SELECT * FROM crypto_prices ORDER BY market_cap DESC LIMIT 5;
-```
+## Environment Variables
+Create a `.env` file in the root directory with the following format:
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=Api_to_PostgreSQL
+DB_USER=your_username
+DB_PASSWORD=your_password
+
+## Using pgAdmin 4
+- Open pgAdmin 4 and connect to your PostgreSQL server.
+- Navigate to the `Api_to_PostgreSQL` database.
+- Run SQL queries to view or manipulate data.
+
+## pgAdmin Query Result
+Here is an example of the query result in pgAdmin 4:
+![pgAdmin Query Result](API_to_PostgreSQL/images/pgadmin_query_result.png)
+
+## Future Enhancements
+- Add data visualization using tools like Tableau or Power BI.
+- Automate the pipeline for scheduled updates.
